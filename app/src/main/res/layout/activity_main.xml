@@ -1,0 +1,117 @@
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/buttonEnviar"
+        android:orientation="vertical"
+        tools:context=".MainActivity" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView"
+            android:layout_gravity="center_horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+    <TextView
+        android:id="@+id/textFrameworks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Teste de Frameworks"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+            <ImageView
+                android:layout_width="100px"
+                android:layout_height="100px"
+                android:layout_marginTop="30dp"
+                android:maxWidth="100px"
+                android:minHeight="100px"
+                android:src="@drawable/person"
+                android:id="@+id/imageViewFoto"
+                android:layout_gravity="center_horizontal" />
+
+
+    <TextView
+        android:id="@+id/textNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Nome"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+            <EditText
+        android:id="@+id/editTextNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+
+    <TextView
+        android:id="@+id/textViewTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Telefone"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editTextTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <CheckBox
+        android:id="@+id/checkBoxLigar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Ligar para mim"/>
+
+
+            <SurfaceView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+
+                android:layout_marginTop="30dp"
+                android:id="@+id/surfaceView"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/take_photo"
+                android:layout_marginTop="10dp"
+                android:id="@+id/imageButton"
+                android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/buttonEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enviar"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+</ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+
