@@ -5,7 +5,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.SurfaceHolder;
@@ -29,6 +28,7 @@ import java.util.Date;
 import java.util.List;
 
 import br.com.qpainformatica.frameworksbaseproject.entities.Contato;
+import br.com.qpainformatica.frameworksbaseproject.utils.CLog;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
@@ -97,7 +97,7 @@ public class MainActivity extends ActionBarActivity {
                     try {
                         camera.startPreview(holder);
                     } catch (IOException e) {
-                        Log.e("amera", "erro: " + e.getMessage());
+                        CLog.e("amera", "erro: " + e.getMessage());
                         e.printStackTrace();
                     }
                     previewIsRunning = true;
@@ -131,7 +131,7 @@ public class MainActivity extends ActionBarActivity {
         }
         EasyCamera.PictureCallback callback = new EasyCamera.PictureCallback() {
             public void onPictureTaken(byte[] data, EasyCamera.CameraActions actions) {
-                Log.i("Foto", "Foto tirada");
+                CLog.i("Foto", "Foto tirada");
                 nomeImagem = salvarFoto(data);
                 try {
                     camera.startPreview(previewHolder);
@@ -164,7 +164,7 @@ public class MainActivity extends ActionBarActivity {
             fo.write(bytes.toByteArray());
             fo.close();
         } catch (IOException e) {
-            Log.e("Foto","Erro: "+e.getMessage());
+            CLog.e("Foto","Erro: "+e.getMessage());
             e.printStackTrace();
         }
         return nomeImagem;
@@ -209,7 +209,7 @@ public class MainActivity extends ActionBarActivity {
         List<Contato> contatos = Contato.listAll(Contato.class);
 
         for (Contato cont : contatos) {
-            Log.i("Contatos", "Nome: " + cont.getNome() + ", tel:" + cont.getTelefone()+ ", Imagem:" + cont.getNomeImagem());
+            CLog.i("Contatos", "Nome: " + cont.getNome() + ", tel:" + cont.getTelefone()+ ", Imagem:" + cont.getNomeImagem());
         }
     }
 
